@@ -8,17 +8,21 @@ import org.apache.hadoop.mapreduce.Reducer;
 
 import java.io.IOException;
 
-public class IntSumReducer extends Reducer<Text,IntWritable,Text,IntWritable> {
-	private IntWritable result = new IntWritable();
-	public void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
-		int sum = 0;
-		for (IntWritable val : values) {
-			System.out.println("value: "+val.get());
-			sum += val.get();
-		}
-		System.out.println("--> Sum = "+sum);
-		result.set(sum);
-		context.write(key, result);
-	}
-}
+public class IntSumReducer
+        extends Reducer<Text,FloatWritable,Text,FloatWritable> {
 
+    private FloatWritable result = new FloatWritable();
+
+    public void reduce(Text key, Iterable<FloatWritable> values,
+                       Context context
+    ) throws IOException, InterruptedException {
+        int sum = 0;
+        for (FloatWritable val : values) {
+            System.out.println("value: "+val.get());
+            sum += val.get();
+        }
+        System.out.println("--> Sum = "+sum);
+        result.set(sum);
+        context.write(key, result);
+    }
+}
