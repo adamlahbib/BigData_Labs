@@ -1,0 +1,4 @@
+/home/adam/labs/bigdata/labs/lab1/wordcount/src/main/java/tn/insat/tp1/WordCount.java
+/home/adam/labs/bigdata/labs/lab1/wordcount/src/main/java/hadoop/mapreduce/Main.java
+/home/adam/labs/bigdata/labs/lab1/wordcount/src/main/java/tn/insat/tp1/IntSumReducer.java
+/home/adam/labs/bigdata/labs/lab1/wordcount/src/main/java/tn/insat/tp1/TokenizerMapper.java
